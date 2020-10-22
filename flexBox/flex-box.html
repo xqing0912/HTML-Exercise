@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .outside {
+            /* width: 1200px; */
+            min-height: 100vh;
+            /* 最小高度100vh */
+            background-color: rgb(227, 227, 238);
+
+        }
+
+        .inside {
+            max-width: 1000px;
+            background-color: rgb(159, 177, 110);
+            margin: 0 auto;
+            display: flex;
+            /* 有  display: flex;時，不要給height,不然會影響子容器的高度*/
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+        }
+
+        .squear {
+            width: 300px;
+            /* height: 300px; */
+            /* border: solid 1px black; */
+            /* display: flex; */
+            margin: 20px auto;
+        }
+
+        .top img {
+            max-width: 100%;
+        }
+
+        .bottom {
+            margin-top: 5px;
+            padding: 10px 15px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            /* justify-content: center;  */
+        }
+
+        .left {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* border: 1px solid black; */
+            float: left;
+            margin-right: 15px;
+        }
+
+        .left img {
+            width: 50px;
+            height: 50px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .right {
+            float: left;
+        }
+
+        .name {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside">
+        <div class="inside">
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear">
+                <div class="top">
+                    <img src="img/404_preview-320x180.jpg">
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="name">頻道名稱</div>
+                        <div class="zhubo_name">實況主名稱</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="squear"></div>
+            <div class="squear"></div>
+            <div class="squear"></div>
+        </div>
+    </div>
+</body>
+
+</html>

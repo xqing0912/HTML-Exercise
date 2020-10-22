@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outside {
+            border: solid 1px blue;
+            width: 500px;
+            height: 500px;
+        }
+
+        .outside h1,
+        p {
+            opacity: 0;
+            transition-duration: 1s;
+            /* 物體本身就要有漸變效果（transition-duration:） */
+        }
+
+        .outside:hover h1,
+        .outside:hover p {
+            opacity: 1;
+        }
+
+        .outside:hover h1 {
+            transition-delay: 0.5s;
+            /* 滑鼠移上去需要延時出現（transition-delay）的物體 */
+        }
+
+        .outside:hover p {
+            transition-delay: 0.5s;
+        }
+
+        .block {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            position: relative;
+        }
+
+        .block .line {
+            width: 100px;
+            height: 10px;
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition-duration: 1s;
+        }
+
+        .block:hover .line1 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .block:hover .line2 {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .block2 {
+            width: 300px;
+            height: 300px;
+            border: blue 1px solid;
+            position: relative;
+        }
+
+        .block2 .rec {
+            width: 200px;
+            height: 10px;
+            border: solid 1px black;
+            transition-duration: 1s;
+
+
+        }
+
+        .block2 .rec1 {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .block2 .rec2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .block2 .rec3 {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .block2:hover .rec1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition-property: transform, top, left;
+            transition-duration: 5s, 5s, 5s;
+            /* transition-property一定要搭配 transition-duration:一起用 
+            transition-property 指要改變的屬性，屬性是已有的屬性
+            transition-duration 漸變的時間
+            */
+        }
+
+        .block2:hover .rec2 {
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .block2:hover .rec3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione et, minus, repellat laboriosam sunt tempora
+            harum officia assumenda voluptate hic quia maiores. Voluptates, repellendus iusto id nam magni a pariatur
+            atque! Nostrum repudiandae unde temporibus harum officiis itaque tenetur maxime deleniti sapiente voluptates
+            omnis commodi impedit nobis, asperiores esse atque? Iste fugiat velit voluptas impedit. Doloribus ea eum
+            nulla! Et eum dolorem unde animi odit, omnis ratione earum? Mollitia nam ipsam atque voluptas quaerat, iste
+            deleniti quidem odio debitis aliquid aperiam saepe reprehenderit tempora. Dolor perspiciatis, eveniet
+            doloribus facere minima sequi, corrupti esse architecto fugiat ipsam ratione saepe at expedita.</p>
+    </div>
+    <div class="block">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+    </div>
+    <div class="block2">
+        <div class="rec rec1"></div>
+        <div class="rec rec2"></div>
+        <div class="rec rec3"></div>
+    </div>
+</body>
+
+</html>

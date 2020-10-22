@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #bluebar {
+            width: 100%;
+            height: 43px;
+            background-color: blue;
+            position: relative;
+        }
+
+        #MenuTop {
+            width: 100%;
+            padding: 6px 0;
+
+            position: absolute;
+            margin-left: 13%;
+
+        }
+
+        #picture {
+            background-image: url(https://i.pinimg.com/564x/60/54/95/605495600814f7e48a8dfc23e95ee23d.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #ig_icon {
+            background-image: url(https://image.flaticon.com/icons/png/512/87/87401.png);
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        #msg {
+            background-image: url(https://image.flaticon.com/icons/png/512/104/104710.png);
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        #help {
+            background-image: url(https://image.flaticon.com/icons/png/512/63/63985.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #fr_icon {
+            background-image: url(https://as2.ftcdn.net/jpg/00/69/50/95/500_F_69509520_ORR7QiCO0fjm9NZVOWXAEZlB7Y2KKJEY.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        #fb {
+            background-image: url(https://image.flaticon.com/icons/png/512/124/124010.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #point {
+            background-image: url(https://image.flaticon.com/icons/png/512/60/60995.png);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .Menu2 {
+            float: left;
+            margin: 0 1%;
+            /* border: 1px solid beige; */
+        }
+
+        .wh {
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        .Round {
+            border-radius: 50%;
+        }
+
+        .font {
+            color: white;
+        }
+
+        .background_top {
+            background-color: white;
+        }
+
+        #find {
+            width: 20%;
+            height: 30px;
+        }
+
+        #box {
+            width: 70%;
+            height: 356px;
+            background-color: lightblue;
+            margin: auto;
+        }
+
+        #cover {
+            width: 100%;
+            height: 313px;
+            background-color: rgb(224, 131, 204);
+            position: relative;
+        }
+
+        #img {
+            width: 170px;
+            height: 170px;
+            border: solid 3px white;
+            border-radius: 50%;
+            /* 外框線變成圓形 */
+            background-image: url(https://i.pinimg.com/564x/60/54/95/605495600814f7e48a8dfc23e95ee23d.jpg);
+            /* 背景圖片 ，連接圖片的位置*/
+            background-size: cover;
+            /* 背景圖片大小 */
+            background-position: center;
+            /* 背景圖片的位置 */
+            position: absolute;
+            bottom: -22px;
+            left: 15px;
+
+        }
+
+        .wall {
+            width: 100%;
+            height: 313px;
+        }
+
+        #box4 {
+            width: 30%px;
+            height: 26px;
+            position: absolute;
+            right: 2px;
+            bottom: 5px;
+        }
+
+        .smal {
+            float: left;
+            padding: 0 35px;
+            color: white;
+            border: whitesmoke 1px solid;
+            /* border-width: 2px; */
+            margin-right: 12px;
+            margin-top: 4px;
+        }
+
+        #more {
+            width: 80px;
+            background-color: teal;
+        }
+
+        #diary {
+            width: 80px;
+            background-color: teal;
+        }
+
+        #linebar {
+            width: 100%;
+            height: 43px;
+            background-color: lightgray;
+        }
+
+        #box1 {
+            width: 70%;
+            margin-left: 30%;
+        }
+
+        .Menu {
+            float: left;
+            padding: 0 5%;
+            text-align: center;
+            color: rgb(224, 117, 30);
+            line-height: 43px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bluebar">
+        <div id="MenuTop">
+            <div id="fb" class="Menu2 wh"></div>
+            <div id="find" class="Menu2  background_top"></div>
+            <div id="picture" class="Menu2 wh  Round"></div>
+            <div id="name" class="Menu2 font">熊慶</div>
+            <div id="first_page" class="Menu2 font">首頁</div>
+            <div id="find_gay" class="Menu2 font">搜索好友</div>
+            <div id="create" class="Menu2 font">創建</div>
+            <div id="fr_icon" class="Menu2 wh"></div>
+            <div id="ig_icon" class="Menu2 wh Round"></div>
+            <div id="msg" class="Menu2 wh"></div>
+            <div id="help" class="Menu2 wh Round "></div>
+            <div id="point" class="Menu2 wh"></div>
+        </div>
+    </div>
+    <div id="box">
+        <div id="cover">
+            <div id="img"></div>
+            <img src="img/bgimg.jpg" class="wall">
+            <div id="box4">
+                <div id="more" class="smal">更新信息</div>
+                <div id="diary" class="smal">活動日誌</div>
+            </div>
+
+        </div>
+        <div id="linebar">
+            <div id="box1">
+                <div id="timeline" class="Menu">时间线</div>
+                <div id="Introduction" class="Menu">個人簡介</div>
+                <div id="friend" class="Menu">好友</div>
+                <div id="photo" class="Menu">相片</div>
+                <div id="private" class="Menu">私人影集</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

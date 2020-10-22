@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            box-sizing: border-box;
+            /* 清除所有框線的內距 */
+        }
+        
+
+        .bd {
+            border: 1px solid black;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .outside {
+            max-width: 1170px;
+            /* height: 100vh; */
+            margin: auto;
+
+        }
+
+        .a {
+            width: 100%;
+            height: 200px;
+            /* float: left; */
+        }
+
+        .b {
+            width: 80%;
+            height: 200px;
+            float: left;
+        }
+
+        .c {
+            width: 20%;
+            height: 200px;
+            float: right;
+        }
+
+        .d {
+            width: 40%;
+            height: 200px;
+            float: left;
+        }
+
+        .e {
+            width: 40%;
+            height: 200px;
+            float: left;
+        }
+
+        .f {
+            width: 20%;
+            height: 200px;
+            float: right;
+        }
+
+        .g {
+            width: 100%;
+            height: 200px;
+            float: left;
+        }
+        @media screen and (max-width: 1000px) {
+            /* max-width: 1000px，熒幕最大寬度為1000px的時候 */
+            .b{
+                width: 100%;
+            }
+            .c, .d, .e, .f{
+                width: 50%;
+            }
+            .a, .b, .g{
+                background-color: cornflowerblue;
+            }
+            
+        }
+        @media screen and (max-width: 512px) {
+            .b, .c, .d, .e, .f{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 1180px) {
+             /* min-width: 1180px，熒幕最小寬度為1180px的時候 */
+            .a, .g{
+                background-color: cadetblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside bd">
+        <div class="a bd">A </div>
+        <div class="b bd">B</div>
+        <div class="c bd">C</div>
+        <div class="d bd">D</div>
+        <div class="e bd">E</div>
+        <div class="f bd">F</div>
+        <div class="g bd">G</div>
+        <div style="clear: both"></div>
+        <!-- 清除以上所有的浮動，讓最外面的div的高度出現 -->
+
+    </div>
+
+</body>
+
+</html>

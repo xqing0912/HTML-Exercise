@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .outside {
+            max-width: 1920px;
+            border: 1px solid black;
+        }
+
+        .nav {
+            width: 30%;
+            height: 100vh;
+            float: left;
+            /* background-color: rgb(73, 122, 124); */
+            background-image: url("img/bg.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .block_L {
+            width: 100%;
+            /* height: 40vh; */
+            /* background-color: rgb(8, 8, 7); */
+            margin: auto;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        .tu_biao {
+            width: 50px;
+            height: 50px;
+            display: none;
+        }
+
+        .logo {
+            min-width: 160px;
+            height: 160px;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 300px;
+            left: 36%;
+
+        }
+
+        ul {
+            position: absolute;
+            top: 490px;
+            left: 44%;
+            padding: 0;
+
+        }
+
+        li {
+            list-style: none;
+            color: rgb(105, 105, 105);
+            line-height: 2em;
+            font-size: 2em;
+            font-weight: bolder;
+        }
+
+        .contan {
+            width: 70%;
+            height: 100vh;
+            float: right;
+        }
+
+
+        .block_R {
+            max-width: 80%;
+            height: 500px;
+            /* background-color: rgb(173, 72, 72); */
+            margin: auto;
+            margin-top: calc(50vh - 250px);
+        }
+
+        .box {
+            width: calc((100% - 20px) / 3);
+            height: 100%;
+            background-color: rgb(124, 73, 77);
+            float: left;
+            /* margin-right: 10px; */
+        }
+
+        .a {
+            margin-right: 10px;
+            background-image: url("img/mei_gui.jpg");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .b {
+            margin-right: 10px;
+            background-image: url("img/mu_dan.jpg");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .c {
+            background-image: url("img/xiu_qiu.jpg");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .font {
+            text-align: center;
+            line-height: 500px;
+            color: rgb(226, 225, 226);
+            font-weight: bold
+        }
+
+        @media screen and (max-width: 1280px) {
+            * {
+                box-sizing: border-box;
+            }
+
+            .outside {
+                max-width: 1280px;
+                border: 1px solid black;
+            }
+
+            .nav {
+                width: 30%;
+                height: 1024px;
+                float: left;
+                background-color: rgb(154, 220, 240);
+            }
+
+            .block_L {
+                width: 100%;
+                /* height: 40vh; */
+                /* background-color: blanchedalmond; */
+
+                margin: auto;
+                margin-top: 100px;
+                position: relative;
+            }
+
+            .logo {
+                min-width: 150px;
+                height: 150px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 20px;
+                left: 32%;
+            }
+
+            ul {
+                position: absolute;
+                top: 200px;
+                left: 56%;
+                /* margin-top: 350px; */
+            }
+
+            li {
+                list-style: none;
+                color: rgb(104, 103, 103);
+            }
+
+            .contan {
+                width: 70%;
+                height: 1024px;
+                float: right;
+            }
+
+
+            .block_R {
+                max-width: 80%;
+                height: 500px;
+                /* background-color: rgb(173, 72, 72); */
+                margin: auto;
+                margin-top: calc((1024px / 2) - 250px);
+            }
+
+            .a {
+                width: 100%;
+                height: calc((500px - 10px)/2);
+                background-color: rgb(240, 157, 154);
+                float: left;
+                margin-bottom: 10px;
+                background-image: url("img/mei_gui.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .b {
+                width: 49%;
+                height: calc((500px - 10px)/2);
+                background-color: rgb(214, 240, 154);
+                float: left;
+                margin-right: 1%;
+                background-image: url("img/mu_dan.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .c {
+                width: 49%;
+                height: calc((500px - 10px)/2);
+                background-color: rgb(240, 231, 154);
+                float: right;
+                /* margin-top: 15px; */
+                background-image: url("img/xiu_qiu.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .font {
+                text-align: center;
+                line-height: calc((500px - 10px)/2);
+                color: rgb(63, 63, 63);
+                font-weight: bold
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            .logo {
+                top: 50px;
+                left: 20%;
+            }
+
+            ul {
+                left: 34%;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .logo {
+                top: 43px;
+                left: 25%;
+            }
+
+            ul {
+                left: 41%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            * {
+                box-sizing: border-box;
+                /* font-weight: bolder; */
+            }
+
+            .outside {
+                max-width: 768px;
+                border: 1px solid black;
+            }
+
+            .nav {
+                width: 100%;
+                height: 15vh;
+                /* float: left; */
+                margin: auto;
+                background-color: rgb(21, 22, 18);
+                margin-bottom: 20px;
+            }
+
+            .block_L {
+                width: 100%;
+                /* height: 40vh; */
+                /* background-color: blanchedalmond; */
+
+                /* margin: auto; */
+                /* margin-top: 150px; */
+                position: relative;
+            }
+
+            .logo {
+                min-width: 65px;
+                height: 65px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: -20px;
+                left: 20px;
+            }
+
+            ul {
+                position: absolute;
+                top: -20px;
+                right: 0;
+                left: 60%;
+                /* margin-top: 350px; */
+            }
+
+            li {
+                list-style: none;
+                color: rgb(114, 114, 114);
+                display: inline;
+                padding: 15px;
+
+            }
+
+            .contan {
+                width: 100%;
+                height: 85vh;
+                /* float: right; */
+                margin: auto;
+
+            }
+
+
+            .block_R {
+                max-width: 98%;
+                height: 100%;
+
+                /* background-color: rgb(173, 72, 72); */
+                margin: 0 1%;
+                /* margin-top: calc(50vh - 205px); */
+            }
+
+            .a {
+                width: 100%;
+                height: calc((85vh - 10px) /2);
+                /* background-color: rgb(221, 144, 173); */
+                float: left;
+                margin-bottom: 10px;
+                background-image: url("img/mei_gui.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .b {
+                width: 49%;
+                height: calc((85vh - 10px) /2);
+                /* background-color: rgb(156, 144, 221); */
+                float: left;
+                margin-right: 1%;
+                background-image: url("img/mu_dan.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .c {
+                width: 49%;
+                height: calc((85vh - 10px) /2);
+                /* background-color: rgb(210, 221, 144); */
+                float: right;
+                /* margin-top: 15px; */
+                background-image: url("img/xiu_qiu.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .font {
+                text-align: center;
+                line-height: calc((85vh - 10px) /2);
+                color: rgb(24, 24, 24);
+                font-weight: bold
+            }
+        }
+
+        @media screen and (max-width: 540px) {
+            .logo {
+                top: -60px;
+            }
+
+            ul {
+                top: -46px;
+                left: 62%;
+            }
+
+            li {
+                line-height: 2em;
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            * {
+                box-sizing: border-box;
+                /* font-weight: bolder; */
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .outside {
+                max-width: 414px;
+                border: 1px solid black;
+            }
+
+            .nav {
+                width: 100%;
+                height: 10vh;
+                /* float: left; */
+                margin: 0;
+                /* background-color: rgb(138, 108, 75); */
+                /* background-image: url("img/bg.jpg");
+                background-position: center;
+                background-size: cover; */
+                /* margin-bottom: 20px; */
+            }
+
+            .block_L {
+                width: 100%;
+                /* height: 40vh; */
+                /* background-color: blanchedalmond; */
+
+                /* margin: auto; */
+                /* margin-top: 150px; */
+                position: relative;
+            }
+
+            .tu_biao {
+                display: none;
+            }
+
+            .logo {
+                min-width: 50px;
+                height: 50px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: -86px;
+                left: 9%;
+                transform: translateX(-50%)
+            }
+
+            ul {
+                position: absolute;
+                top: -80px;
+                right: 0;
+                display: none;
+                /* margin-top: 350px; */
+            }
+
+            li {
+                list-style: none;
+                color: rgb(122, 121, 121);
+                display: inline;
+                padding: 5px;
+
+            }
+
+            .contan {
+                width: 100%;
+                height: 90vh;
+                /* float: right; */
+                /* margin: 0; */
+
+            }
+
+
+            .block_R {
+                max-width: 100%;
+                height: 667px;
+
+                /* background-color: rgb(173, 72, 72); */
+                /* margin:0 1%; */
+                /* margin-top: calc(50vh - 205px); */
+            }
+
+            .a {
+                width: 100%;
+                height: calc(667px / 3);
+                /* background-color: rgb(144, 221, 144); */
+                /* float: left; */
+                margin: 0;
+                background-image: url("img/mei_gui.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .b {
+                width: 100%;
+                height: calc(667px / 3);
+                /* background-color: rgb(221, 144, 157); */
+                /* float: left; */
+                margin: 0;
+                background-image: url("img/mu_dan.jpg");
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .c {
+                width: 100%;
+                height: calc(667px / 3);
+                /* background-color: rgb(221, 210, 144); */
+                /* float: right; */
+                /* margin-top: 15px; */
+                background-image: url("img/xiu_qiu.jpg");
+                background-size: cover;
+                background-position: center;
+                margin: 0;
+
+
+            }
+
+            .font {
+                text-align: center;
+                line-height: calc(667px / 3);
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+            }
+
+            /* .pic{
+                background-size: cover;
+            } */
+        }
+
+        /* @media screen and (max-width: 375px) {
+            .logo {
+                top: -87px;
+            }
+        } */
+
+        @media screen and (max-width: 360px) {
+            .logo {
+                min-width: 45px;
+                height: 45px;
+                top: -84px;
+                left: 11%;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .logo {
+                top: -91px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside bod">
+        <div class="nav bod flo">
+            <div class="block_L">
+                <div class="tu_biao"></div>
+                <img src="img/logo.jpg" class="logo">
+
+                <ul>
+                    <li>牡丹</li>
+                    <li>綉球</li>
+                    <li>玫瑰</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contan bod flo">
+            <div class="block_R bod">
+                <div class="a box font ">玫瑰
+                    <!-- <img src="img/mei_gui.jpg" class="pic"> -->
+                </div>
+                <div class="b box font">牡丹
+                    <!-- <img src="img/mu_dan.jpg" class="pic"> -->
+                </div>
+                <div class="c box font ">綉球
+                    <!-- <img src="img/xiu_qiu.jpg" class="pic"> -->
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

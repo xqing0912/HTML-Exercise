@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outside {
+            width: 1000px;
+            height: 900px;
+            border: black 1px solid;
+            position: relative;
+        }
+
+        .outside .box {
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            position: absolute;
+            margin: 0 10px;
+
+        }
+
+        .outside .box1 {
+            left: 10px;
+            animation-name: change;
+            /* 動畫的名稱 */
+            animation-duration: 5s;
+            /* 動畫持續時間 */
+            animation-iteration-count: 5;
+            /* 動畫播放次數 */
+            animation-direction: alternate-reverse;
+            /* 動畫播放的方向 ，alternate-reverse：交替反向播放*/
+        }
+
+        .outside .box2 {
+            left: 200px;
+            animation: change2 5s infinite;
+            /*這是簡寫，  指動畫：名稱 持續時間 持續次數 */
+        }
+
+        .outside .box3 {
+            left: 400px;
+            animation: change3 5s infinite;
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+            /* 動畫運行的加速度 */
+        }
+
+        .outside .box4 {
+            left: 600px;
+            border-radius: 50%;
+            animation: change4 5s infinite;
+            animation-timing-function: cubic-bezier(1.55, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes change {
+            50% {
+                transform: translateY(200px);
+            }
+        }
+
+        @keyframes change2 {
+            50% {
+                transform: rotate(720deg);
+                /* 旋轉720度 */
+            }
+        }
+
+        @keyframes change3 {
+            50% {
+                transform: translateY(400px);
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes change4 {
+
+            50% {
+                transform: translateY(500px);
+                width: 120px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 以下的快捷語法（.outside>.box.box$*4） -->
+    <div class="outside">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>

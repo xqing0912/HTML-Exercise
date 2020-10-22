@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+
+            box-sizing: border-box;
+            /* box-sizing: border-box，自動扣除邊框和內距的寬度 ，不會把整個div撐大*/
+        }
+
+        .divtop {
+            width: 100%;
+            background-color: #4284F7;
+
+        }
+
+        .fbicon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+
+            /* vertical-align：middle，基線置中對齊 */
+
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            margin-left: 15px;
+            border-radius: 10px;
+            /* border-radius框線圓角 */
+            padding: 5px;
+            /* box-sizing: border-box; */
+        }
+
+        .divcenter {
+            height: 400px;
+            position: relative;
+            background-color: lightgrey;
+        }
+        .wall{
+            width: 100%;
+            height: 400px;
+        }
+
+        .box {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .a {
+            padding: 15px;
+            text-decoration: none;
+            margin-right: 30px;
+            background-color: linen;
+            color: #666;
+            font-weight: bolder;
+
+        }
+
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -40px;
+            left: 20px;
+            /* background-position: center; */
+        }
+
+
+        .divbottom {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(245, 240, 240);
+
+        }
+
+        ul {
+            margin: 0;
+            margin-left: 350px;
+            padding: 40px;
+        }
+
+        li {
+            list-style: none;
+            display: inline;
+            margin-right: 30px;
+            color: #4284F7;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divbig">
+        <div class="divtop">
+            <img class="fbicon" src="img/icon.png">
+            <input type="text" placeholder="你想搜尋什麼">
+        </div>
+        <div class="divcenter">
+            <img src="img/1234.jpg" class="photo">
+            <img src="img/bgimg3.jpg" class="wall" >
+            <div class="box">
+                <a href="" class="Update_info  a">更新信息</a>
+                <a href="" class="diary  a">活動日誌</a>
+            </div>
+
+        </div>
+        <div class="divbottom">
+            <ul>
+                <li>時間線</li>
+                <li>個人簡介</li>
+                <li>好友</li>
+                <li>相片</li>
+                <li>私人影集</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

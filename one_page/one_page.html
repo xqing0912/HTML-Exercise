@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳情令</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .outside {
+            width: 100%;
+            background-color: #030305;
+
+        }
+
+        /* .top{
+            height: 10vh;
+            position: absolute;
+            position: fixed;
+            z-index: 999;
+        } */
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .top .logo img {
+            background-position: center;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+        }
+
+        .top .bars {
+            width: 100px;
+            height: 100px;
+            background-image: url("menu_icon.jpg");
+            background-position: center;
+            background-size: cover;
+            display: none;
+        }
+
+        .banner {
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            align-content: center;
+            /* background-color: #030305; */
+        }
+
+        .nav .menu {
+            border: 1px solid rgb(10, 10, 10);
+            border-radius: 20px;
+            font-family: "微軟正黑體";
+            /* color: rgb(182, 174, 174); */
+            font-size: 24px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .nav .menu a {
+            text-decoration: none;
+            color: rgb(182, 174, 174);
+        }
+
+        .nav .menu a:hover {
+            border-radius: 20px;
+            background-color: rgb(214, 214, 212);
+            color: rgb(212, 56, 129);
+        }
+
+        .page_one {
+            width: 100%;
+            /* height: 100vh; */
+            background-image: url("5.jpeg");
+            background-size: cover;
+            background-position: center;
+
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page_one .position {
+            width: 100%;
+            background-color: #030305;
+            opacity: 0.6;
+        }
+
+        .page_one .position p {
+            margin: 0;
+            color: cornsilk;
+            text-align: center;
+            text-align: justify;
+            line-height: 30px;
+            font-size: 18px;
+            font-family: "微軟正黑體";
+            letter-spacing: 1px;
+            padding: 80px;
+            /* max-width: 80%; */
+        }
+
+        .page_two {
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+        }
+
+        .page_two .left {
+
+            background-image: url("6.jpg");
+            width: 50%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            /* position: relative; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page_two .left .left_p {
+
+            font-family: "微軟正黑體";
+            font-size: 20px;
+            color: cornsilk;
+            text-align: justify;
+            line-height: 30px;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            background-color: #030305;
+            padding: 30px 30px;
+        }
+
+        .page_two .right {
+            background-image: url("13.jpg");
+            width: 50%;
+            height: 100vh;
+            background-position: top;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page_two .right .right_p {
+            font-family: "微軟正黑體";
+            font-size: 20px;
+            color: cornsilk;
+            text-align: justify;
+            line-height: 30px;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            background-color: #030305;
+            padding: 30px 30px;
+        }
+
+        .page_three {
+            height: 100vh;
+            width: 100%;
+            background-image: url("5.jpeg");
+            background-position: top;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .page_three .content {
+
+            text-align: center;
+            font-family: "微軟正黑體";
+            color: cornsilk;
+            letter-spacing: 1px;
+            font-size: 20px;
+            background-color: #030305;
+            opacity: 0.6;
+            padding: 30px 30px;
+
+        }
+
+        .page_three .content p {
+            text-align: justify;
+            margin-top: 60px;
+
+        }
+
+        .page_four {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #030305;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page_four .box {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .page_four .box .left {
+            width: 50%;
+            height: 500px;
+            background-image: url("15.jpg");
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .page_four .box .right {
+            width: 50%;
+            /* height: 500px; */
+            font-size: 20px;
+            font-family: "微軟正黑體";
+            color: cornsilk;
+            letter-spacing: 1px;
+            line-height: 35px;
+            opacity: 0.6;
+            margin-left: 5%;
+        }
+
+
+        .page_four .box .right p {
+            margin: 0;
+            text-align: justify;
+        }
+
+        .go_top {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+        }
+
+        .go_top a {
+            text-decoration: none;
+            color: #eee;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .go_top:hover {
+            background-color: rgb(190, 190, 190);
+            cursor: pointer;
+        }
+
+        .go_top:hover a {
+            color: rgb(189, 107, 107);
+        }
+
+        @media screen and (max-width: 414px) {
+            .outside {
+                max-width: 414px;
+                background-color: #030305;
+            }
+
+            .go_top {
+                bottom: -12px;
+                right: 2px;
+                width: 64px;
+                height: 64px;
+            }
+
+            .go_top a{
+                line-height: 64px;
+                font-size: 14px;
+                margin-left: 11px;
+            }
+            .top {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .top .bars {
+                width: 50px;
+                height: 50px;
+                display: block;
+            }
+
+            .top .logo img {
+                width: 50px;
+                height: 50px;
+                display: block;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .page_one .position p {
+                padding: 10px;
+                line-height: 27px;
+                font-size: unset;
+            }
+
+            .page_two {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .page_two .left {
+                width: 100%;
+                height: 60vh;
+            }
+
+            .page_two .left .left_p {
+                font-size: 18px;
+            }
+
+            /* .page_two .left .left_p{
+                width: 100%;
+            } */
+            .page_two .right {
+                width: 100%;
+                height: 60vh;
+            }
+
+            .page_two .right .right_p {
+                font-size: 18px;
+            }
+
+            .page_three {
+                height: unset;
+            }
+
+            .page_three .content {
+                font-size: 18px;
+            }
+
+            .page_three .content .title {
+                margin-top: 0;
+            }
+
+            .page_four {
+                height: unset;
+            }
+
+            .page_four .box {
+                height: unset;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .page_four .box .left {
+                height: 300px;
+                width: 100%;
+            }
+
+            .page_four .box .right {
+                width: 100%;
+                margin: 0;
+                padding: 0 10px;
+                font-size: 18px;
+            }
+
+            .page_four .box .right .title {
+                text-align: center;
+            }
+
+            .page_four .box .right .desc {
+                line-height: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="go_top"><a href="#top">回頁首</a></div>
+    <div class="outside">
+        <div class="top container">
+            <div class="logo">
+                <img src="logo.jpg">
+            </div>
+            <div class="bars">
+            </div>
+        </div>
+        <div class="banner">
+            <img src="9.jpg">
+        </div>
+        <div id="top" class="nav container ">
+            <div class="menu"> <a href="#page_one">劇情總結 </a></div>
+            <div class="menu"><a href="#page_two">人物分析 </a></div>
+            <div class="menu"><a href="#page_three">劇情特點</a></div>
+            <div class="menu"><a href="#page_four">角色之一</a></div>
+        </div>
+    </div>
+    <div id="page_one" class="page_one">
+        <div class="position">
+            <p>陳情令劇情根據墨香銅臭小說《魔道祖師》改編，以五大家族為背景，講述了雲夢江氏故人之子魏無羨和姑蘇藍氏含光君藍忘機重遇，攜手探尋往年真相的故事。十六年前，天下五分，姑蘇藍氏，雲夢江氏，清河聶氏，岐山溫氏，蘭陵金氏共治天下。溫氏一家獨大，其餘四家均受其苦。眾家青年中，江氏故人之子魏無羨性格開朗，和以雅正聞名的姑蘇藍氏弟子藍忘機相識並引為知己。一次偶然的機會，二人發現了藍氏一直以來守護的秘密，二人繼承遺志，為蒼生消除隱患。但沒想到一切的幕後黑手正是溫氏家主溫若寒。眾家不堪其辱，合力討伐溫氏。溫氏覆滅後，魏無羨卻為保護溫氏無辜之人不惜與眾家對立，最終被奸人所害釀成大禍，誤害師姐江厭離，自己也不知所蹤。十六年後，消失已久的魏無羨在莫家莊出現，偶遇故人藍忘機。莫家莊一樁樁詭異的兇案顯得撲朔迷離。隨著真相一步步揭開，身處幕後的金光瑤漸漸難以隱藏。最後金光瑤身死，藍忘機承擔起了匡扶天下的使命，而魏無羨不忘初心，最終瀟灑世間。
+            </p>
+        </div>
+    </div>
+    <div id="page_two" class="page_two">
+        <div class="left">
+            <div class="left_p">
+                魏無羨和藍忘機二人性格南轅北轍，讓他們惺惺相惜的，是心底裡的良知。二人不打不相識，不受禮教拘囿的魏無羨(魏嬰)做盡一切讓「小古板」藍忘機(藍湛)看不過眼的事情，大哥藍曦臣卻對藍忘機說魏無羨會是一個不錯的朋友。
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_p">
+                在雲深不知處求學的那一段，把二人的性格刻劃得淋漓盡致。魏無羨愛玩不聽話，但並非不學無術。老師藍老先生問他的題無一不懂，而且更有自己的一番見解，只是在視家規祖訓如命的藍家中，沒規沒舉，還語出驚人的學生注定不討好。
+                　　
+            </div>
+        </div>
+    </div>
+    <div id="page_three" class="page_three ">
+        <div class="content  container">
+            <h2>如何去看待劇情</h2>
+            <p class="title">
+                假如你六根清淨、心靈純潔，它就只是一部兄弟情誼義薄雲天的武俠劇；但只要你看懂了，它就絕對纏綿悱惻、忠於原著。這部作品的微妙之處，在於演員們的眼神交了一百二十分的戲。演員們口裡說著一份台詞，眼神演的卻是另一份劇本，才有了觀眾自行解讀的隱藏功能。
+            </p>
+        </div>
+    </div>
+    <div id="page_four" class="page_four">
+        <div class="box container">
+            <div class="left">
+            </div>
+            <div class="right">
+                <h2 class="title">藍忘機的角色</h2>
+                <p class="desc">
+                    藍忘機一向惜字如金，對魏無羨的評價當中，十句有九句都是「無聊」，多兩個字的則是「無聊至極」，稍微有點新意的是「荒唐」，言不過三就讓他閉嘴，不聽話就直接對他施禁言術。然而藍忘機的冷漠並沒有讓魏無羨知難而退，反而更喜歡跟他打鬧，看他被自己氣得坐不住腳彷彿是種樂趣。而且魏無羨也直言出於欣賞，就算他古板迂腐，還是想要跟他交朋友，率直得可愛。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
